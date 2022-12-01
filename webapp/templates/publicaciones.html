@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+{{categoria.categoria}}
+{% for publicacion in publicaciones %}
+<div>
+  <table>
+    <a href="/{{publicacion.id}}">{{publicacion.titulo}}</a>
+  </table>
+</div>
+
+{% endfor %} {% endblock %}

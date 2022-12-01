@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <title>{% block title %} Bienvenidos {% endblock %}</title>
+  </head>
+  <body>
+    <!-- barra de arriba INICIO-->
+    <div class="container-fluid">
+      <div class="row py-4 px-lg-5 bg-success">
+        <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0"></div>
+        <div class="col-lg-6 text-center text-lg-right">
+          <div class="d-inline-flex align-items-center">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/apachprotanimales.charata"
+            >
+              {% load static %}
+              <img
+                class="rslogo mx-4"
+                src="{% static 'img/facebook.png' %}"
+                alt="facebook logo"
+              />
+            </a>
+            <a target="_blank" href="https://www.instagram.com/apacharata/">
+              {% load static %}
+              <img
+                class="rslogo mx-4"
+                src="{% static 'img/instagram.png' %}"
+                alt="instagram logo"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row py-4 px-lg-5 bg-white">
+        <div class="d-flex justify-content-center">
+          <a href="#">
+            {% load static %}
+            <img
+              class="logotipo-principal d-flex justify-content-center"
+              src="{% static 'img/logoong.jpeg' %}"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- barra de arriba FIN-->
+
+    <!-- NAV INICIO -->
+    <nav
+      class="navbar py-4 navbar-expand-sm navbar-dark bg-dark"
+      aria-label="Third navbar example"
+    >
+      <div class="collapse mx-4 navbar-collapse d-flex justify-content-evenly">
+        <ul class="navbar-nav mb-2 mb-sm-0 mx-4">
+          <div>
+            <li class="nav-item mx-5">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'index' %}"
+                >INICIO</a
+              >
+            </li>
+          </div>
+
+          <div>
+            <li class="nav-item mx-5">
+              <a class="nav-link" href="#">NOSOTROS</a>
+            </li>
+          </div>
+
+          <div>
+            <li class="nav-item mx-5">
+              <a class="nav-link">NOTICIAS</a>
+            </li>
+          </div>
+
+          <div>
+            <li class="nav-item mx-5">
+              <a href="{% url 'categorias' %}" class="nav-link">CATEGORIAS</a>
+            </li>
+          </div>
+
+          <div>
+            <li class="nav-item mx-5">
+              <a href="{% url 'contacto' %}" class="nav-link">CONTACTO</a>
+            </li>
+          </div>
+
+          <div class="loggin">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Iniciar Sesion</a>
+            </li>
+          </div>
+          <div>
+            <li class="nav-item">
+              <a href="{% url 'registro_usuario' %}" class="nav-link"
+                >Registrarse</a
+              >
+            </li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+    <!-- NAV FIN -->
+
+    <!-- bloque INICIO -->
+
+    {% block content %} {% endblock %}
+
+    <!-- bloque FIN -->
+
+    <!-- Footer Inicio-->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+      <div class="row pt-5">
+        <div class="col-lg-5 col-md-12 mb-5">
+          <h1 class="mb-3 display-5 text-capitalize text-white">
+            <span class="texto-footer d-flex justify-content-center"
+              >APACH</span
+            >
+          </h1>
+          <p class="mx-2">
+            Nuestro grupo es una asociacion de personas que tienen una causa en
+            comun: EL AMOR INCONDICONAL POR LOS ANIMALES DOMESTICOS Y
+            SILVESTRES. Aclaramos que nuetra tarea es desde el corazon y solo a
+            voluntad. Esta Agrupacion nace a fines del año 2000 como una
+            preocupacion ciudadana por el ciudado de animales de la calle (
+            perros y gatos) en ese entonces eramos la llamada informalmente : "
+            SOCIEDAD PROTECTORA DE ANIMALES". En el mes de Septiembre del 2010
+            fuimos reconocidos por APACH RESISTENCIA, para trabajar en nombre de
+            APACH DELEGACION CHARATA. OBJETIVOS:1-Difundir, promover y proteger
+            los derechos de los animales. 2- Fomentar la tenencia responsable..
+            3- Inculcar en el ser humano el amor por animales domesticos y
+            salvajes. 4-Difundir la esterilización como unico método ético de
+            control de la reproducción de la fauna urbana. 5-Realizar campañas
+            de desparasitaciones,castraciones, y sanidad a grupos caninos y
+            felinos vulnerables, a traves del asesoramiento de un profesional
+            veterinario. 6- Lograr el interes de otros grupos sociales en
+            colaborar en la ayuda de los animales. Importante: Rechazamos el
+            hacinamiento animal ya sea en guarderias caninas y felinas; por el
+            contrario creemos que la castracion es el metodo mas efectivo y
+            seguro para lograr el control del crecimeinto poblacional de
+            animales no deseados. APACH DELEGACION CHARATA ES UNA AGRUPACION SIN
+            FINES DE LUCRO.
+          </p>
+        </div>
+        <div class="col-lg-7 col-md-12">
+          <div class="row">
+            <div class="col-md-6 mb-5">
+              <h5 class="text-orange d-flex justify-content-center mb-4">
+                Medios de Contacto
+              </h5>
+              <p class="d-flex justify-content-center">
+                Charata, Chaco - Argentina
+              </p>
+              <p class="d-flex justify-content-center">3731- 433844</p>
+              <p class="d-flex justify-content-center">
+                apacharata@hotmail.com
+              </p>
+              <div class="d-flex justify-content-center mt-4">
+                <div class="d-inline-flex align-items-center">
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/apachprotanimales.charata"
+                  >
+                    {% load static %}
+                    <img
+                      class="rslogo mx-4"
+                      src="{% static 'img/facebook.png' %}"
+                      alt="facebook logo"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/apacharata/"
+                  >
+                    {% load static %}
+                    <img
+                      class="rslogo mx-4"
+                      src="{% static 'img/instagram.png' %}"
+                      alt="instagram logo"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-5">
+              <h5 class="text-orange d-flex justify-content-center mb-4">
+                Links Populares
+              </h5>
+              <div class="d-flex flex-column justify-content-center">
+                <a
+                  class="text-white mb-2 d-flex justify-content-center"
+                  href="#"
+                  >Inicio</a
+                >
+                <a
+                  class="text-white mb-2 d-flex justify-content-center"
+                  href="#"
+                  >Nosotros</a
+                >
+                <a
+                  class="text-white mb-2 d-flex justify-content-center"
+                  href="#"
+                  >Noticias</a
+                >
+                <a
+                  class="text-white mb-2 d-flex justify-content-center"
+                  href="#"
+                  >Eventos</a
+                >
+                <a
+                  class="text-white d-flex justify-content-center"
+                  href="{% url 'contacto' %}"
+                  >Contactos</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid bg-success justify-content-center text-white py-4 px-sm-3 px-md-5"
+    >
+      <div>
+        <div class="text-center text-md-left mb-3 mb-md-0">
+          <p class="m-0 text-white">
+            &copy;
+            <a class="text-white font-weight-bold" href="#"
+              >Grupo-11-Informatorio2022</a
+            >. Todos los derechos reservados
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer final-->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+:root {
+  --texto-primario: #ed6436;
+}
+html {
+  background-color: white;
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem es igual a 10px */
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: white;
+  font-family: var(--fuentePrincipal);
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+/* nav principal */
+.nav-principal {
+  display: flex;
+  justify-content: space-between;
+}
+.loggin {
+  margin-right: 0;
+}
+.text-primary {
+  font-size: 2.2rem;
+}
+.logo-principal {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.redes {
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+.logotipo-principal {
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* TEXTOS */
+.texto-logo-principal {
+  font-size: 4rem;
+}
+.texto-footer {
+  color: #ed6436;
+}
+.texto-nav-top {
+  font-size: 2.2rem;
+}
+
+.text-footer {
+  font-size: 10rem;
+}
+
+.form-control {
+  font-size: 1.8rem;
+}
+
+.btn-primary {
+  font-size: 1.8rem;
+}
+
+.text-orange {
+  color: var(--texto-primario);
+  font-size: 2.2rem;
+}
+
+.bg-orange {
+  background-color: #ed6436;
+  border-color: #ed6436;
+}

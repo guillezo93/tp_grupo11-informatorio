@@ -1,0 +1,74 @@
+{% extends 'base.html' %} {% block content %}
+<main>
+  <div class="container-fluid pt-5">
+    <div class="d-flex flex-column text-center mb-5 pt-5">
+      <h1 class="display-4 m-0">
+        Contactános para
+        <span class="text-primary">Cualquier Consulta</span>
+      </h1>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-8 mb-5">
+        <div class="contact-form">
+          <div></div>
+          <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <div class="control-group">
+              <input
+                type="text"
+                class="form-control p-4"
+                id="name"
+                placeholder="Nombre"
+                required="required"
+                data-validation-required-message="Ingrese su nombre"
+              />
+              <p class="help-block text-danger"></p>
+            </div>
+            <div class="control-group">
+              <input
+                type="email"
+                class="form-control p-4"
+                id="email"
+                placeholder="Email"
+                required="required"
+                data-validation-required-message="Ingrese su email"
+              />
+              <p class="help-block text-danger"></p>
+            </div>
+            <div class="control-group">
+              <input
+                type="text"
+                class="form-control p-4"
+                id="subject"
+                placeholder="Asunto"
+                required="required"
+                data-validation-required-message="Ingrese su asunto"
+              />
+              <p class="help-block text-danger"></p>
+            </div>
+            <div class="control-group">
+              <textarea
+                class="form-control p-4"
+                rows="6"
+                id="message"
+                placeholder="Escriba su mensaje"
+                required="required"
+                data-validation-required-message="Ingrese su mensaje"
+              ></textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+            <div>
+              <button
+                class="btn btn-primary bg-orange py-3 px-5"
+                type="submit"
+                id="enviar-mensaje"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
