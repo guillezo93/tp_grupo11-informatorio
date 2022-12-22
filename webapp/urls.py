@@ -21,12 +21,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.bienvenida, name='index'),
     path('contacto/', views.contacto, name='contacto'),
-    path('eventos/', views.eventos, name='eventos'),
-    path('calendario/', views.calendario, name='calendario'),
     path('nosotros/', views.nosotros, name='nosotros'),
-    path('registro/', views.registro2, name='registro_usuario'),
-    path('categorias/', views.categorias, name='categorias'),
-    path('categorias/<int:categoria_id>', views.categoria, name='categoria_id')
-    
+    path('registro/', views.registro1, name='registro_usuario'),
+    path('logueo/,', views.login2, name='logueo'),
+    path('logout/', views.logout2, name='logout'),
+    path('listar/', views.Listar_Noticias, name='listar'),
+    path('Detalle/<int:pk>', views.Detalle_Noticias, name='detalle'),
+    path('Comentario/', views.Comentar_Noticia, name='comentar'),
+
 ]
- 

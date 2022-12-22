@@ -20,9 +20,9 @@ body {
 }
 
 img {
-  max-width: 100%;
-  display: block;
-  height: auto;
+  max-width: auto;
+  max-height: 25rem;
+  object-fit: cover;
 }
 /* nav principal */
 .nav-principal {

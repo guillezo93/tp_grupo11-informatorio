@@ -3,6 +3,10 @@
 <main class="container my-5">
   <form action="" method="post">
     <h2 class="titulo my-5 text-center">Registro de Usuario</h2>
+    <div class="text-center my-2">
+      {{error}}
+    </div>
+    
     <div class="container d-flex justify-content-center py-5 my-5">
       {% csrf_token %}
       <table>

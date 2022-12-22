@@ -1,4 +1,90 @@
-{% extends 'base.html' %} {% block content %}
-<h2>hola</h2>
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- seccion nosotros -->
+
+<div class="s-nosotros container py-5 bg-light">
+    <div class="row py-5">
+        <div class="col-lg-12 pb-5 pb-lg-0 px-3 px-lg-5 text-center text-capitalize">
+            <h1 class="display-4 mb-4 text-primary">Asociacion Protectora <span class="text-primary">de Animales del
+                    chaco</span></h1>
+            <h4 class="mb-3">Nuestro grupo es una asociacion de personas que tienen una causa en comun: EL AMOR
+                INCONDICONAL POR LOS ANIMALES DOMESTICOS Y SILVESTRES.</h4>
+            <h4 class="mb-3">Aclaramos que nuetra tarea es desde el corazon y solo a voluntad.</h4>
+            <p class="mb-4">Esta Agrupacion nace a fines del año 2000 como una preocupacion ciudadana por el ciudado de
+                animales de la calle ( perros y gatos) en ese entonces eramos la llamada informalmente : " SOCIEDAD
+                PROTECTORA DE ANIMALES".</p>
+        </div>
+        <div class="pb-5 pb-lg-0 px-3 px-lg-5">
+            <h2 class="mb-4 mt-5">
+                En el mes de Septiembre del 2010 fuimos reconocidos por APACH RESISTENCIA, para trabajar en nombre de
+                APACH DELEGACION CHARATA. OBJETIVOS:</h2>
+            <p class="mt-3">1-Difundir, promover y proteger los derechos de los animales.</p>
+            <p>2- Fomentar la tenencia responsable..</p>
+            <p>3- Inculcar en el ser humano el amor por animales domesticos y salvajes.</p>
+            <p>4-Difundir la esterilización como unico método ético de control de la reproducción de la fauna urbana.
+            </p>
+            <p>5-Realizar campañas de desparasitaciones,castraciones, y sanidad a grupos caninos y felinos vulnerables,
+                a traves del asesoramiento de un profesional veterinario.</p>
+            <p>6- Lograr el interes de otros grupos sociales en colaborar en la ayuda de los animales.</p>
+
+            <div class="d-flex justify-content-center">
+                <a href="{% url 'nosotros' %}" class="btn btn-lg btn-primary">Mas Información</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- seccion de blog -->
+<div class="container pt-5 bg-white">
+    <div class="d-flex flex-column text-center mb-5">
+        <h1 class="display-4 m-0"><span class="text-primary">Noticias</span></h1>
+    </div>
+    <div class="row pb-3">
+        <div class="col-lg-4 mb-4">
+            <div class="card border-0 mb-2">
+                {% load static %}
+                <img class="card-img-top" src="{% static 'img/blog-1.jpg' %}" alt="">
+                <div class="card-body bg-light p-4">
+                    <h4 class="card-title text-truncate">titulo:Diam amet eos at no eos</h4>
+                    iam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est diam eos, rebum sit vero
+                    stet justo</p>
+                </div>
+                <div class="text-center bg-light">
+                    <a class="font-weight-bold tex" href="{% url 'listar' %}">Mas Información</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card border-0 mb-2">
+                {% load static %}
+                <img class="card-img-top" src="{% static 'img/blog-2.jpg' %}" alt="">
+                <div class="card-body bg-light p-4">
+                    <h4 class="card-title text-truncate">titulo:Diam amet eos at no eos</h4>
+                    <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est diam eos, rebum sit
+                        vero stet justo</p>
+                </div>
+                <div class="text-center bg-light">
+                    <a class="font-weight-bold tex" href="{% url 'listar' %}">Mas Información</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card border-0 mb-2">
+                {% load static %}
+                <img class="card-img-top" src="{% static 'img/blog-3.jpg' %}" alt="">
+                <div class="card-body bg-light p-4">
+                    <h4 class="card-title text-truncate">titulo:Diam amet eos at no eos</h4>
+                    <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est diam eos, rebum sit
+                        vero stet justo</p>
+                </div>
+                <div class="text-center bg-light">
+                    <a class="font-weight-bold tex" href="{% url 'listar' %}">Mas Información</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

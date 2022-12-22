@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<h1 class="text-center my-5">{{noticia.titulo}}</h1>
+
+<div class="d-flex flex-column align-items-center">
+	<img src="{{noticia.imagen.url}}" width="500" height="500">
+
+	<p>FECHA: {{noticia.fecha}}</p>
+	<p>CATEGORIA: {{noticia.categoria_noticia}}</p>
+	<p class="mx-5 px-5">CUERPO: {{noticia.cuerpo}}</p>
+	<br><br>
+</div>
+
+<!-- COMENTARIOS -->
+<div class="mb-5 mx-5 text-start">
+	<h3 class="mb-4 text-uppercase">Comentarios</h3>
+	{% for com in comentarios %}
+	<div class="media mb-4">
+		<div class="media-body">
+			<h4> {{com.usuario}} <small><i>{{com.fecha}}</i></small></h4>
+			<p>{{com.texto}}</p>
+			<button class="btn btn-sm btn-light">Responder</button>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+<div style="padding: 30px; background: #f6f6f6;">
+	<h3 class="mb-4">Deja tu comentario</h3>
+	<form method="POST" action="{% url 'comentar' %}">{% csrf_token %}
+		<div class="form-group">
+			<label for="message">Message *</label>
+			<textarea name="comentario" maxlength="1500" id="message" cols="30" rows="5"
+				class="form-control"></textarea>
+		</div>
+		<div class="form-group mb-0">
+			<input type="text" name="id_noticia" value="{{noticia.pk}}" hidden="">
+			<input type="submit" value="GUARDAR" class="btn btn-primary px-3">
+			<a class="px-3" href="{% url 'listar' %}">VOLVER</a>
+
+		</div>
+	</form>
+</div>
+
+{% endblock %}
